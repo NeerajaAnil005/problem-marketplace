@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Problem Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <nav>
+        <h2><i class="uil uil-rocket"></i> Problem Marketplace</h2>
+        <div class="nav-links">
+            <a href="index.html">Browse Problems</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <div class="auth-wrapper">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>Create Account</h1>
+                <p>Join the community of problem solvers</p>
+            </div>
+
+            <div class="auth-form">
+                <div>
+                    <label class="input-label" for="regName">Full Name</label>
+                    <input type="text" id="regName" placeholder="John Doe">
+                </div>
+                <div>
+                    <label class="input-label" for="regEmail">Email Address</label>
+                    <input type="email" id="regEmail" placeholder="name@company.com">
+                </div>
+                <div>
+                    <label class="input-label" for="regPassword">Password</label>
+                    <input type="password" id="regPassword" placeholder="••••••••">
+                </div>
+                <button type="button" class="btn-primary" onclick="register()">
+                    <i class="uil uil-user-plus"></i> Create Account
+                </button>
+            </div>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Sign in instead</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>

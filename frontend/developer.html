@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Dashboard | Problem Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <script>
+    // Inline check for faster redirection
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+
+<body>
+
+  <nav>
+    <h2><i class="uil uil-rocket"></i> Problem Marketplace</h2>
+    <div class="nav-links">
+      <a href="index.html">Browse Problems</a>
+      <a href="developer.html" class="active">Dashboard</a>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span id="userName" style="font-weight: 600;"></span>
+        <button onclick="logout()" class="btn-primary"
+          style="padding: 0.5rem 1rem; background: var(--glass); border: 1px solid var(--glass-border);">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header style="margin-bottom: 3rem;">
+      <h1>Developer Dashboard</h1>
+      <p class="subtitle">Track your progress and submit solutions to the problems you've adopted.</p>
+    </header>
+
+    <div class="problems-header">
+      <h2 style="font-size: 1.5rem; font-weight: 700;">My Adopted Challenges</h2>
+    </div>
+
+    <div id="adoptedList" class="problem-grid">
+      <!-- Adopted problems will be injected here -->
+      <div class="loading" style="text-align: center; grid-column: 1/-1; padding: 4rem;">
+        <p style="color: var(--text-secondary)">Loading your challenges...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+  <script>
+    // Set user name in header
+    document.getElementById('userName').innerText = JSON.parse(localStorage.getItem("user")).name;
+
+    function logout() {
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+
+</html>
