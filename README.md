@@ -215,7 +215,17 @@ Axios Integration
 
 Styling
 
+## 🚀 Future Scope
 
+Introduce a Leaderboard System to rank developers based on the number and quality of solutions submitted.
+
+Implement a Rating & Review System where users can rate solutions to ensure quality and credibility.
+
+Add user profiles with badges and achievement levels.
+
+Enable skill-based filtering to match problems with relevant developers.
+
+Integrate real-time notifications and advanced analytics for better engagement.
 
 
 
